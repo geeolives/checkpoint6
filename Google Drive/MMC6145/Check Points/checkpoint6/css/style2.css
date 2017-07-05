@@ -1,0 +1,211 @@
+/* My attempt at using variables in SCSS - do not work
+$red: #ff2400;
+$blue: #0040b2;
+$green: #338445;
+
+h1 {
+	color: $red;
+}
+
+*/
+/*Once again sass variables do not work for me
+$font-stack: Nunito, sans-serif;
+
+h1 {
+	font: 100% $font-stack;
+}
+
+*/
+.grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 50%) 3fr;
+  grid-gap: 40px;
+  grid-template-areas: "header header" "sidebar content" "footer footer"; }
+
+header {
+  grid-area: header;
+  text-align: center;
+  margin-bottom: 0; }
+
+main {
+  grid-area: content;
+  padding-top: 100px;
+  margin-right: 50px;
+  padding-bottom: 100px; }
+
+aside {
+  grid-area: sidebar;
+  padding: 20px; }
+
+aside h1 {
+  font-size: 36px;
+  color: #ff2400; }
+
+h2 {
+  color: #0040b2;
+  font-family: 'Libre Franklin', sans-serif; }
+
+footer {
+  background: #0040b2;
+  color: white;
+  grid-area: footer;
+  text-align: center;
+  margin-top: 30px; }
+
+/* Use of Flexbox and SCSS in Navigation */
+/*This works for me in Code Pen but for some reason it doesn't work on the live site*/
+.navigation {
+  list-style: none;
+  margin: 0;
+  background: #ff2400;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: center; }
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1em;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2em; }
+
+.navigation a:hover {
+  background: #003ca8; }
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around; } }
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0; }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+  .navigation li:last-of-type a {
+    border-bottom: none; } }
+/*Donation Form CSS -- Animation requirement here*/
+.donate-wrapper {
+  background-color: #0040b2;
+  color: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  width: 75%;
+  position: relative;
+  -webkit-animation: mymove 5s infinite;
+  /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite; }
+
+.donate-wrapper h1 {
+  font-family: 'Libre Franklin', sans-serif;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-weight: 900;
+  font-size: 24px; }
+
+.donate-box-wrapper {
+  padding-bottom: 20px; }
+
+.donate-box {
+  background-color: #196cff;
+  display: inline-block;
+  color: #fff;
+  padding: 12px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  margin: 0 10px;
+  border-radius: 3px; }
+
+.donate-box:hover {
+  background-color: #4fcc6b;
+  color: #fff;
+  cursor: pointer; }
+
+.btn-green {
+  font-family: 'Libre Franklin', sans-serif;
+  margin: 0 10px;
+  padding: 10px;
+  background-color: #4fcc6b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  display: inline-block;
+  border-radius: 3px;
+  -webkit-transition: 320ms;
+  transition: 320ms;
+  font-weight: 900;
+  cursor: pointer;
+  border: solid 1px #82c110;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #FFF; }
+
+.btn-green:hover, .btn-green:focus, .btn-green:active {
+  background-color: #196cff;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+  color: #FFF;
+  outline: none;
+  border: 0; }
+
+.donate-wrapper .btn-green {
+  margin-bottom: 10px;
+  width: 16%;
+  font-size: 14px;
+  align-content: center; }
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  0% {
+    top: 0px; }
+  25% {
+    top: 200px; }
+  75% {
+    top: 50px; }
+  100% {
+    top: 100px; } }
+/* Standard syntax */
+@keyframes mymove {
+  0% {
+    top: 0px; }
+  25% {
+    top: 200px; }
+  75% {
+    top: 50px; }
+  100% {
+    top: 100px; } }
+p {
+  font-family: 'Nunito', sans-serif; }
+
+.socialicons {
+  margin: 40px auto 15px; }
+
+.socialicons li {
+  display: inline;
+  margin: 0 10px;
+  text-align: center; }
+
+h3 {
+  font-weight: 500;
+  font-style: italic;
+  color: #0040b2; }
+
+button {
+  background-color: #0040b2;
+  width: 25%;
+  color: white;
+  font-family: 'Libre Franklin', sans-serif; }
